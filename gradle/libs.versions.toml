@@ -3,6 +3,14 @@ antlr-kotlin = "1.0.8"
 compose-jb = "1.10.1"
 kotlin = "2.3.0"
 ktor = "3.3.3"
+collection = "1.6.0"
+# TextMate parsing dependencies for JVM
+# # Eclipse T4ME + Transitive dependencies
+t4me = "0.17.3-SNAPSHOT"
+jdt-annotations = "2.4.100"
+joni = "2.2.7"
+jcodings = "1.0.64"
+annotations = "26.1.0"
 
 [plugins]
 antlr-kotlin = { id = "com.strumenta.antlr-kotlin", version.ref = "antlr-kotlin" }
@@ -15,6 +23,8 @@ kotlin-plugin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization"
 maven-publish = { id = "com.vanniktech.maven.publish", version = "0.35.0" }
 
 [libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+jetbrains-annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
 antlr-kotlin-runtime = { module = "com.strumenta:antlr-kotlin-runtime", version.ref = "antlr-kotlin" }
 compose-materialIcons = { module = "org.jetbrains.compose.material:material-icons-core", version = "1.7.3" }
 filekit-compose = { module = "io.github.vinceglb:filekit-compose", version = "0.8.8" }
@@ -26,3 +36,10 @@ ktor-client-engine-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor
 ktor-client-engine-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 pdfbox = { module = "org.apache.pdfbox:pdfbox", version = "3.0.6" }
+androidx-collection = { module = "androidx.collection:collection", version.ref = "collection" }
+# TextMate parsing dependencies for JVM
+# # Eclipse T4ME + Transitive dependencies
+eclipse-t4me-core = { module = "org.eclipse:org.eclipse.tm4e.core", version.ref = "t4me" }
+eclipse-jdt-annotations = { module = "org.eclipse.jdt:org.eclipse.jdt.annotation", version.ref = "jdt-annotations" }
+jruby-joni = { module = "org.jruby.joni:joni", version.ref = "joni" }
+jruby-jcodings = { module = "org.jruby.jcodings:jcodings", version.ref = "jcodings" }

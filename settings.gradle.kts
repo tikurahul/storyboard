@@ -12,6 +12,11 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         google()
+        maven(url = uri("https://repo.eclipse.org/content/repositories/tm4e-snapshots/")) {
+            mavenContent {
+                includeGroupAndSubgroups("org.eclipse")
+            }
+        }
     }
 }
 
@@ -21,6 +26,7 @@ include(":storyboard")
 include(":storyboard-easel")
 include(":storyboard-layout")
 include(":storyboard-text")
+include(":storyboard-warp")
 
 include(":examples:basic")
 include(":examples:diagram")

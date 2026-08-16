@@ -25,6 +25,7 @@ kotlin {
                 implementation(project(":storyboard-easel"))
                 implementation(project(":storyboard-layout"))
                 implementation(project(":storyboard-text"))
+                implementation(project(":storyboard-warp"))
 
                 implementation(project(":examples:shared"))
 

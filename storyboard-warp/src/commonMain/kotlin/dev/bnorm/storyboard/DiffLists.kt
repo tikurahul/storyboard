@@ -63,7 +63,7 @@ internal fun afterViewOf(states: List<State>): DiffContents {
         }
     }
     // Sort by the startIndex so they are ordered correctly
-    val sortedArray: Array<List<State>?> = arrayOfNulls(size = rows.size)
+    val sortedArray: Array<List<State>> = Array(rows.size) { emptyList() }
     rows.forEach { (rowIdx, states) ->
         val tokens = states.sortedBy { state ->
             when (state) {
@@ -75,8 +75,7 @@ internal fun afterViewOf(states: List<State>): DiffContents {
         }
         sortedArray[rowIdx] = tokens
     }
-    @Suppress("UNCHECKED_CAST")
-    return DiffContents(rows = (sortedArray as Array<List<State>>).asList())
+    return DiffContents(rows = sortedArray.asList())
 }
 
 internal fun beforeViewOf(states: List<State>): DiffContents {
@@ -92,7 +91,7 @@ internal fun beforeViewOf(states: List<State>): DiffContents {
         }
     }
     // Sort by the startIndex so they are ordered correctly
-    val sortedArray: Array<List<State>?> = arrayOfNulls(size = rows.size)
+    val sortedArray: Array<List<State>> = Array(rows.size) { emptyList() }
     rows.forEach { (rowIdx, states) ->
         val tokens = states.sortedBy { state ->
             when (state) {
@@ -104,6 +103,5 @@ internal fun beforeViewOf(states: List<State>): DiffContents {
         }
         sortedArray[rowIdx] = tokens
     }
-    @Suppress("UNCHECKED_CAST")
-    return DiffContents(rows = (sortedArray as Array<List<State>>).asList())
+    return DiffContents(rows = sortedArray.asList())
 }

@@ -34,5 +34,9 @@ kotlin {
             implementation(libs.jruby.joni)
             implementation(libs.jruby.jcodings)
         }
+        wasmJsMain.dependencies {
+            implementation("org.jetbrains.kotlinx:kotlinx-browser:0.5.0")
+            implementation(npm("shiki", "^4.3.1"))
+        }
     }
 }

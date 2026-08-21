@@ -24,6 +24,7 @@ dependencies {
     dokka(project(":storyboard"))
     dokka(project(":storyboard-easel"))
     dokka(project(":storyboard-text"))
+    dokka(project(":storyboard-warp"))
 }
 
 allprojects {
